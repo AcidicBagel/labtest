@@ -1,69 +1,132 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сайт Событий СГУПС</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <h1>СГУПС</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Все события</a></li>
-                <li><a href="#">Наука</a></li>
-                <li><a href="#">Профком</a></li>
-                <li><a href="#">Спорт</a></li>
-            </ul>
-        </nav>
-    </header>
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-    <section class="cards">
-        <div class="card">
-            <i class="fas fa-running"></i>
-            <h3>Соревнования по легкой атлетике</h3>
-            <p>Асинхронное ритмическое поле имеет флюгель-горн.</p>
-        </div>
+body {
+    max-width: 900px;
+    margin: 0 auto;
+}
 
-        <div class="card">
-            <i class="fas fa-microphone"></i>
-            <h3>Стендап “О науке”</h3>
-            <p>Нота имитирует неизменный гипнотический рифф.</p>
-        </div>
+header {
+    font-family: "Inter";
+    background-color: white;
+    text-decoration: none;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    z-index: 1000;
+}
 
-        <div class="card">
-            <i class="fas fa-smile"></i>
-            <h3>КВН</h3>
-            <p>Крен нелинеен, инерциальная навигация требует анализа ошибок.</p>
-        </div>
+.logo-text {
+    font-weight: 900;
+    font-size: 350%;
+    display: inline-block;
+    color: black;
+    margin-left: 15px;
+}
 
-        <div class="card">
-            <i class="fas fa-chalkboard-teacher"></i>
-            <h3>Научная конференция</h3>
-            <p>Малое колебание связывает гироинтегратор до полного прекращения вращения.</p>
-        </div>
+.navigationbar {
+    display: flex;
+    margin-top: -10px;
+    margin-right: 15px;
+}
 
-        <div class="card">
-            <i class="fas fa-volleyball-ball"></i>
-            <h3>Волейбол</h3>
-            <p>Ускорение учитывает вектор угловой скорости.</p>
-        </div>
-    </section>
+.navigationbar a {
+    color: black;
+    background-color: whitesmoke;
+    border-radius: 25px;
+    border: 1px solid #bbbbbb;
+    text-decoration: none;
+    margin: 10px;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 70%;
+    transition: background-color 0.3s ease;
+}
 
-    <section class="extra-content">
-        <h2>О Сибирском государственном университете путей сообщения</h2>
-        <p>Сибирский государственный университет путей сообщения (СГУПС) — это один из ведущих транспортных вузов России, который имеет долгую историю и славные традиции. Университет был основан в 1932 году и с тех пор выпустил тысячи квалифицированных специалистов в области транспорта, логистики, инженерии и экономики. СГУПС является ключевым образовательным и научным центром для железнодорожной отрасли, предлагая широкий спектр образовательных программ, начиная с бакалавриата и заканчивая программами аспирантуры и докторантуры.</p>
+.navigationbar a.active {
+    background-color: black;
+    color: white;
+}
 
-        <p>СГУПС гордится своими высококвалифицированными преподавателями и научными сотрудниками, которые активно работают над созданием инновационных решений в области транспорта. Университет сотрудничает с ведущими транспортными компаниями и международными организациями, обеспечивая студентам возможность прохождения практики и стажировок на крупнейших предприятиях.</p>
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 15px;
+    margin: 0 auto;
+    font-family: "Inter";
+}
 
-        <p>Одной из главных целей университета является подготовка высококлассных специалистов, способных справляться с вызовами современного мира. В СГУПС уделяют особое внимание научно-исследовательской деятельности, что позволяет студентам и преподавателям участвовать в разработке новейших технологий и решений для транспортной отрасли.</p>
+@media (min-width: 768px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
-        <p>Университет предлагает своим студентам не только качественное образование, но и возможность активной социальной и культурной жизни. В СГУПС проводятся спортивные мероприятия, научные конференции, конкурсы КВН и другие интересные события, которые позволяют студентам развиваться всесторонне и находить новые увлечения. Университет является настоящей кузницей талантов, где каждый студент может раскрыть свой потенциал.</p>
+.card {
+    position: relative;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: end;
+}
 
-        <p>Сибирский государственный университет путей сообщения — это не просто учебное заведение, это целая жизнь, полная открытий, достижений и стремлений к новым горизонтам. Мы гордимся своими выпускниками, которые вносят значительный вклад в развитие транспортной инфраструктуры не только России, но и всего мира.</p>
-    </section>
-</body>
-</html>
+.date {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card i {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    text-align: start;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.card p {
+    text-align: start;
+    font-size: 16px;
+}
+
+.gradient-one {
+    background: linear-gradient(140deg, #FFC95D, #FC7C05);
+    color: white;
+}
+
+.gradient-two {
+    background: linear-gradient(140deg, #BE67D9, #5E27FC);
+    color: white;
+}
+
+.blackwhite {
+    background-color: white;
+    color: black;
+}
+
+.blackwhite i {
+    color: black;
+}
+
+.blackwhite h3, .blackwhite p {
+    color: black;
+}
