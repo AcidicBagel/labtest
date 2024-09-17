@@ -26,14 +26,14 @@
 
         <section class="cards">
             <div class="card gradient-one">
-                <div class="date">23.11.2023</div>
+                <div class="date white">23.11.2023</div>
                 <i class="fas fa-running"></i>
                 <h3>Соревнования по легкой атлетике</h3>
                 <p>Асинхронное ритмическое поле, следовательно, имеет флюгель-горн. Райдер использует хроматический микрохроматический интервал.</p>
             </div>
     
             <div class="card">
-                <div class="date">23.11.2023</div>
+                <div class="date black">23.11.2023</div>
                 <i class="fas fa-microphone"></i>
                 <h3>Стендап “О науке”</h3>
                 <p>Действительно, нота имитирует неизменный гипнотический рифф. Контрапункт контрастных фактур, на первый взгляд, имитирует рок-н-ролл 50-х. Детройтское техно начинает мелодический рок-н-ролл 50-х.</p>
@@ -47,7 +47,7 @@
             </div>
     
             <div class="card gradient-two">
-                <div class="date">23.11.2023</div>
+                <div class="date white">23.11.2023</div>
                 <i class="fas fa-chalkboard-teacher"></i>
                 <h3>Научная конференция</h3>
                 <p>Малое колебание, согласно уравнениям Лагранжа, безусловно связывает гироинтегратор до полного прекращения вращения.</p>
@@ -60,24 +60,5 @@
                 <p>Исключая малые величины из уравнений, штопор заставляет перейти к более сложной системе дифференциальных уравнений, если добавить лазерный период. Ускорение учитывает вектор угловой скорости.</p>
             </div>
         </section>
-
     </body>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const navLinks = document.querySelectorAll('.navigationbar a');
-    
-            navLinks.forEach(link => {
-                link.addEventListener('click', function () {
-                    navLinks.forEach(link => link.classList.remove('active'));
-                    this.classList.add('active');
-                });
-            });
-            const defaultActiveLink = document.querySelector('.navigationbar a.active');
-            if (defaultActiveLink) {
-                defaultActiveLink.classList.add('active');
-            }
-        });
-    </script>
-    
 </html>
